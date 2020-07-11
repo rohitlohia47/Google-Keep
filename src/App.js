@@ -33,6 +33,7 @@ function App() {
 
             <input type='text' placeholder="Title.." />
             <textarea name='content' placeholder="Take a note..." spellcheck="false"></textarea>
+            <button type="button" class="btn btn-success addbtn"><span>+</span></button>
 
 
           </form>
