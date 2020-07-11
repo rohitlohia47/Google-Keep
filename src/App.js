@@ -1,10 +1,18 @@
 import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
 
 
 function App() {
   return (
-    <h1>THis is app component</h1>
+    <>
+      <div className="container">
+
+
+      </div>
+
+    </>
   );
 }
 
