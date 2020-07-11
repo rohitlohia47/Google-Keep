@@ -8,7 +8,10 @@ function App() {
   return (
     <>
       <div className="container">
+        <div className="technologies">
 
+
+        </div>
 
       </div>
 
