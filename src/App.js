@@ -27,8 +27,14 @@ function App() {
   }
 
   const handleClick = () => {
+    if (data.title == "" && data.content == "") {
+      alert('Please Enter Note Title and Content')
+    }
+    else {
 
-    updateNotes([...notes, data])
+      updateNotes([...notes, data])
+    }
+
   }
 
 
@@ -54,8 +60,20 @@ function App() {
 
           <form>
 
-            <input name="title" value={data.title} type='text' placeholder="Title.." onChange={handleChange} />
-            <textarea name='content' value={data.content} placeholder="Take a note..." spellcheck="false" onChange={handleChange}></textarea>
+            <input
+              name="title"
+              value={data.title}
+              type='text'
+              placeholder="Title.."
+              onChange={handleChange}
+              autoComplete="off" />
+
+            <textarea
+              name='content'
+              value={data.content}
+              placeholder="Take a note..."
+              spellcheck="false"
+              onChange={handleChange}></textarea>
             <button type="button" class="btn btn-success addbtn" onClick={handleClick}><span>+</span></button>
 
 

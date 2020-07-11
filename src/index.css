@@ -19,6 +19,10 @@ code {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.nav-link {
+  font-weight: 500!important;
+}
+
 .logos{
   display: flex;
   align-items: center;
@@ -70,5 +74,47 @@ form textarea {
 .notes{
   display: flex;
   flex-wrap: wrap;
+ 
 }
+.card{
+  transition: 0.3s;
+  border-radius: 10px !important;
+}
+.card:hover{
+  box-shadow:0 0 20px rgba(0,0,0, 0.3) ;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 576px) { 
+  .notes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card{
+    width: 100% !important;
+  }
+ }
+ @media (max-width: 768px) { 
+  .notes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card{
+    width: 100% !important;
+  }
+ }
+
+
+@media (max-width: 1202px) { 
+  .notes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+ }
+
 
