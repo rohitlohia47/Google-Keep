@@ -17,7 +17,7 @@ const Nav = () => {
                                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="https://github.com/rohitlohia47/Google-Keep">Source Code (Github)</a>
+                                <a className="nav-link" href="https://github.com/rohitlohia47/Google-Keep">Source Code(Github)</a>
                             </li>
 
 

@@ -10,6 +10,9 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
 function App() {
 
+  let editnoteindex = 0
+  let updatedindex = 0;
+
   const [data, updateData] = useState({
     title: "",
     content: ""
@@ -31,12 +34,47 @@ function App() {
       alert('Please Enter Note Title and Content')
     }
     else {
-
+      updateData({
+        title: "",
+        content: ""
+      })
       updateNotes([...notes, data])
     }
 
   }
 
+  const deletenote = (id) => {
+    updateNotes(notes.filter((val, index) => { return index !== id }))
+  }
+
+
+
+
+  const editnote = (id) => {
+    document.getElementById('editor').style.display = 'block'
+    editnoteindex = id
+    console.log("editnoteindex", id);
+    document.getElementById('edittitle').value = notes[id].title
+    document.getElementById('editcontent').value = notes[id].content
+  }
+
+  const savenote = () => {
+
+
+    let newarr = [...notes]
+    newarr.forEach((val, index) => {
+
+      if (index == editnoteindex) {
+        val.title = document.getElementById('edittitle').value;
+        val.content = document.getElementById('editcontent').value;
+
+      }
+    })
+
+    updateNotes([...newarr])
+    document.getElementById('editor').style.display = 'none'
+
+  }
 
   return (
     <>
@@ -83,14 +121,28 @@ function App() {
         {/* User Input Area Ends (Note Title and Body) */}
 
         <div className="notes">
-          {notes.map((value) => {
-            return <Notes title={value.title} content={value.content} />
-          })}
+          {notes.map((value, index) => {
+            return <Notes title={value.title} content={value.content} delete={deletenote} edit={editnote} id={index} />
+          })
+          }
 
 
 
         </div>
 
+        <div id="editor">
+
+          <form>
+
+            <input id="edittitle" name="edittitle" autoComplete="off" placeholder="enter title" />
+
+            <textarea id="editcontent" name='editcontent' placeholder="enter body"></textarea>
+            <button type="button" class="btn btn-primary addbtn" onClick={savenote} >Save</button>
+
+
+          </form>
+
+        </div>
 
 
       </div>

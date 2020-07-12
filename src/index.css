@@ -85,6 +85,11 @@ form textarea {
   transform: scale(1.05);
 }
 
+#editor{
+  display: none;
+}
+
+
 
 @media (max-width: 576px) { 
   .notes{
