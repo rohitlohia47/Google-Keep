@@ -10,8 +10,8 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
 function App() {
 
-  let editnoteindex = 0
-  let updatedindex = 0;
+  let editnoteindex = 0 //Store temporary index of the card where the edit button is clicked
+
 
   const [data, updateData] = useState({
     title: "",
@@ -29,6 +29,8 @@ function App() {
     })
   }
 
+  //Push atate value into the notes array whenever user click on the button
+
   const handleClick = () => {
     if (data.title == "" && data.content == "") {
       alert('Please Enter Note Title and Content')
@@ -43,28 +45,31 @@ function App() {
 
   }
 
+  //take index of the note as parameter where delete button is clicked and filter that card out from the actual notes arrray
   const deletenote = (id) => {
     updateNotes(notes.filter((val, index) => { return index !== id }))
   }
 
 
 
+  // take index of the note as array whenever user click on edit button and store it's value in editnoteindex variable so that the savenote function can access it. It also copies the title and content of the selected note into the editor.
 
   const editnote = (id) => {
+
     document.getElementById('editor').style.display = 'block'
+
     editnoteindex = id
     console.log("editnoteindex", id);
     document.getElementById('edittitle').value = notes[id].title
     document.getElementById('editcontent').value = notes[id].content
   }
 
+  // it copies the value and title from the editor to the actual note whenever user click on save button
   const savenote = () => {
-
-
-    let newarr = [...notes]
+    let newarr = [...notes] //create a copy of the notes array from the currrent state
     newarr.forEach((val, index) => {
 
-      if (index == editnoteindex) {
+      if (index == editnoteindex) { //checking the note element to update
         val.title = document.getElementById('edittitle').value;
         val.content = document.getElementById('editcontent').value;
 
@@ -130,18 +135,23 @@ function App() {
 
         </div>
 
-        <div id="editor">
-
-          <form>
-
-            <input id="edittitle" name="edittitle" autoComplete="off" placeholder="enter title" />
-
-            <textarea id="editcontent" name='editcontent' placeholder="enter body"></textarea>
-            <button type="button" class="btn btn-primary addbtn" onClick={savenote} >Save</button>
+        {/* //pop up editor, whenever user click on edit button */}
+        <div className="input">
 
 
-          </form>
+          <div id="editor" className='editor' >
 
+            <form className="editform" style={{ boxShadow: "0 0 30px rgba(0,0,0,0.3)" }}>
+
+              <input id="edittitle" name="edittitle" autoComplete="off" placeholder="Edit title" />
+
+              <textarea id="editcontent" name='editcontent' placeholder="Edit body"></textarea>
+              <button type="button" class="btn btn-primary addbtn" onClick={savenote} >Save</button>
+
+
+            </form>
+
+          </div>
         </div>
 
 

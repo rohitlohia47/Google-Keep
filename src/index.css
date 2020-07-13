@@ -55,6 +55,9 @@ form textarea {
   resize: none;
   outline: none;
 }
+#edittitle{
+  font-weight: bold;
+}
 
 .input{
   display: flex;
@@ -86,7 +89,20 @@ form textarea {
 }
 
 #editor{
-  display: none;
+  
+display: none;
+width: 100%;
+transition: 0.4s ;
+}
+.editform{
+  transform: translateY(-400px);
+  z-index: 10;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  height: 200px;
+  
 }
 
 
