@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Google-Keep/static/css/main.444487fb.chunk.css",
+    "main.js": "/Google-Keep/static/js/main.fb6c7fc7.chunk.js",
+    "main.js.map": "/Google-Keep/static/js/main.fb6c7fc7.chunk.js.map",
+    "runtime-main.js": "/Google-Keep/static/js/runtime-main.0ec1a971.js",
+    "runtime-main.js.map": "/Google-Keep/static/js/runtime-main.0ec1a971.js.map",
+    "static/css/2.75c4ecca.chunk.css": "/Google-Keep/static/css/2.75c4ecca.chunk.css",
+    "static/js/2.b30365ad.chunk.js": "/Google-Keep/static/js/2.b30365ad.chunk.js",
+    "static/js/2.b30365ad.chunk.js.map": "/Google-Keep/static/js/2.b30365ad.chunk.js.map",
+    "index.html": "/Google-Keep/index.html",
+    "precache-manifest.7679eeb6bc873fe211d5274aeac0c674.js": "/Google-Keep/precache-manifest.7679eeb6bc873fe211d5274aeac0c674.js",
+    "service-worker.js": "/Google-Keep/service-worker.js",
+    "static/css/2.75c4ecca.chunk.css.map": "/Google-Keep/static/css/2.75c4ecca.chunk.css.map",
+    "static/css/main.444487fb.chunk.css.map": "/Google-Keep/static/css/main.444487fb.chunk.css.map",
+    "static/js/2.b30365ad.chunk.js.LICENSE.txt": "/Google-Keep/static/js/2.b30365ad.chunk.js.LICENSE.txt",
+    "static/media/bootstrap.jpg": "/Google-Keep/static/media/bootstrap.1aa61eee.jpg",
+    "static/media/google.png": "/Google-Keep/static/media/google.0a6783bd.png",
+    "static/media/react.png": "/Google-Keep/static/media/react.37fe8322.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ec1a971.js",
+    "static/css/2.75c4ecca.chunk.css",
+    "static/js/2.b30365ad.chunk.js",
+    "static/css/main.444487fb.chunk.css",
+    "static/js/main.fb6c7fc7.chunk.js"
+  ]
+}
