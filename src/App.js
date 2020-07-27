@@ -29,7 +29,7 @@ function App() {
     })
   }
 
-  //Push atate value into the notes array whenever user click on the button
+  //Push state value into the notes array whenever user click on the button
 
   const handleClick = () => {
     if (data.title == "" && data.content == "") {
